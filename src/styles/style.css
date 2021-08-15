@@ -1,0 +1,56 @@
+body{
+  background: #ffcc00;
+  justify-content: center;
+}
+.quote{
+  text-align: center;
+  font-size: 3.3rem;
+  margin: auto;
+  padding: 15px;
+  border: 2px solid black;
+  max-width: 70%;
+  position: relative;
+  margin-top: 100px;
+}
+blockquote{
+  color: white;
+  text-shadow: -1px 1px #555;
+  font-style: italic;
+  position: relative;
+  z-index: 20;
+}
+.left{
+  position: absolute;
+  top: -50px;
+  left: -20px;
+  width: 150px;
+  text-align: left;
+  z-index: 10;
+  font-size: 8rem;
+  color: #336699;
+  background-color: #ffcc00;
+  line-height: 200px;
+}
+.right{
+  position: absolute;
+  bottom: -50px;
+  right: -20px;
+  width: 150px;
+  text-align: right;
+  z-index: 10;
+  font-size: 8rem;
+  color: #336699;
+  background-color: #ffcc00;
+  line-height: 200px;
+}
+.small{
+  font-size: 1.7rem;
+  color: #336699;
+  position: relative;
+  z-index: 20;
+}
+  
+.small:before{
+    content: "\2014 \0020";
+    width: 5px;
+  }
