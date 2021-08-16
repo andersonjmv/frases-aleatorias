@@ -14,7 +14,7 @@ function App() {
 
   const GetQuotes = async () => {
     setLoading(true);
-    const url = "https://randomquotesfakeapi.herokuapp.com/frases";
+    const url = "http://localhost:4000/frases";
     const res = await fetch(url);
     const data = await res.json();
     const random = data[Math.floor(Math.random() * data.length)];
@@ -34,10 +34,9 @@ function App() {
 
 
   return (
-    <div>
-        <button onClick={() => GetQuotes()}>Siguiente</button>
-        { loading ? <Spinner /> : <Quotes quote={quote}/> }
-       
+    <div className="btn-container">
+        <button className="button" onClick={() => GetQuotes()}>Siguiente</button>
+        <div>{ loading ? <Spinner /> : <Quotes quote={quote}/> }</div>
     </div>
   );
 }
