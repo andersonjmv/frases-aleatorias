@@ -14,7 +14,7 @@ function App() {
 
   const GetQuotes = async () => {
     setLoading(true);
-    const url = "http://localhost:4000/frases";
+    const url = "https://randomquotesfakeapi.herokuapp.com/frases";
     const res = await fetch(url);
     const data = await res.json();
     const random = data[Math.floor(Math.random() * data.length)];
