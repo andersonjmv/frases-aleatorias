@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import Quotes from './components/Quotes'
-import Spinner from './components/Spinner'   
+  
 
 const quoteInitial = {
     text: 'text',
@@ -10,10 +10,9 @@ const quoteInitial = {
 function App() {
 
   const [quote, setQuote] = useState(quoteInitial);
-  const [loading, setLoading] = useState(false);
+  
 
   const GetQuotes = async () => {
-    setLoading(true);
     const url = "https://randomquotesfakeapi.herokuapp.com/frases";
     const res = await fetch(url);
     const data = await res.json();
@@ -24,7 +23,7 @@ function App() {
       text,
       author,
     })
-    setLoading(false);
+
   }
 
 
@@ -36,7 +35,7 @@ function App() {
   return (
     <div className="btn-container">
         <button className="button" onClick={() => GetQuotes()}>Siguiente</button>
-        <div>{ loading ? <Spinner /> : <Quotes quote={quote}/> }</div>
+        <div><Quotes quote={quote}/></div>
     </div>
   );
 }
